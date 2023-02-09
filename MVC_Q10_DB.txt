@@ -8,5 +8,6 @@ CREATE TABLE TblTest
 	pruebaApellidos nchar(20) not null,
 	pruebaIdentificacion int primary key,
 	pruebaGenero nchar(20) not null,
+	pruebaTelefono int not null,
 	pruebaMail nchar(40) not null,
 )
