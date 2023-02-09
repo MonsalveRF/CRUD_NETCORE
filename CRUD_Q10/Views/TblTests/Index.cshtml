@@ -1,0 +1,59 @@
+﻿@model IEnumerable<CRUD_Q10.Models.TblTest>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Nuevo Usuario</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PruebaNombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PruebaApellidos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PruebaGenero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PruebaTelefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PruebaMail)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PruebaNombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PruebaApellidos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PruebaGenero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PruebaTelefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PruebaMail)
+            </td>
+            <td>
+                <a asp-action="Edit" class="btn btn-warning" asp-route-id="@item.PruebaIdentificacion">Editar</a> |
+                <a asp-action="Details" class="btn btn-primary" asp-route-id="@item.PruebaIdentificacion">Detalles</a> |
+                <a asp-action="Delete" class="btn btn-darger" asp-route-id="@item.PruebaIdentificacion">Borrar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

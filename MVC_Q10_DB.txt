@@ -1,0 +1,12 @@
+CREATE DATABASE MVC_Q10_DB
+
+USE MVC_Q10_DB
+
+CREATE TABLE TblTest
+(
+	pruebaNombre nchar(15) not null,
+	pruebaApellidos nchar(20) not null,
+	pruebaIdentificacion int primary key,
+	pruebaGenero nchar(20) not null,
+	pruebaMail nchar(40) not null,
+)

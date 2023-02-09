@@ -1,0 +1,54 @@
+﻿@model CRUD_Q10.Models.TblTest
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editar</h1>
+
+<h4>TblTest</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PruebaNombre" class="control-label"></label>
+                <input asp-for="PruebaNombre" class="form-control" />
+                <span asp-validation-for="PruebaNombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PruebaApellidos" class="control-label"></label>
+                <input asp-for="PruebaApellidos" class="form-control" />
+                <span asp-validation-for="PruebaApellidos" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="PruebaIdentificacion" />
+            <div class="form-group">
+                <label asp-for="PruebaGenero" class="control-label"></label>
+                <input asp-for="PruebaGenero" class="form-control" />
+                <span asp-validation-for="PruebaGenero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PruebaTelefono" class="control-label"></label>
+                <input asp-for="PruebaTelefono" class="form-control" />
+                <span asp-validation-for="PruebaTelefono" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PruebaMail" class="control-label"></label>
+                <input asp-for="PruebaMail" class="form-control" />
+                <span asp-validation-for="PruebaMail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver al inicio</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
